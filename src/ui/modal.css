@@ -1,0 +1,70 @@
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: auto; 
+    backdrop-filter: blur(10px);
+}
+
+  .active{
+    display: block;
+  }
+
+  .contenido-modal {
+    position: relative; 
+    background-color: rgb(17, 17, 17);
+    margin: auto; 
+    padding: 20px;
+    width: 80vw;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s;
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    border: 1px rgba(255, 255, 255, 0.027) solid;
+    min-height: 10vh;
+  }
+
+  .close {
+    color: rgb(255, 255, 255);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    border: 1px solid rgba(252, 252, 252, 0.103);
+    border-radius: 64px;
+    width: 60px;
+  }
+  .close:hover,
+  .close:focus {
+    color: rgb(112, 112, 112);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  @keyframes animarsuperior {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  @media screen and (max-width: 700px) {
+    .modal{
+        padding-top: 20px;
+    }
+    .contenido-modal{
+        width: 90vw;
+        min-height: 15vh;
+    }
+}
